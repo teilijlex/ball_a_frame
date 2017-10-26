@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-entity rotation = "0 45 0">
+    <a-scene>
+     <a-assets>
+     <img id="skyTexture"
+      src="img/bkgd.jpg">   
+     </a-assets>
+<!--     <a-text value="Hello, YI" color="#fff" position="0 2 -2" align="center" rotation="" scale="" visible="" text=""></a-text>-->
+      
+      <a-sphere position="1 -17 -200" radius="1.25" color="#F7EC13"><a-animation attribute="position" to="0 2.2 -1" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation></a-sphere>
+      <a-sphere position="-5 9 -20" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="0 5 -15" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="2 7 -15" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="-2 1.25 -20" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="10 1.25 -10" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="7 1.25 -30" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="8 1.25 -20" radius="1.25" color="#F7EC13"></a-sphere>
+      
+      <a-sphere position="30 2.5 -20" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="23 8 -15" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="18 5 -15" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="9 4 -20" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="15 2 -10" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="9 3 -30" radius="1.25" color="#F7EC13"></a-sphere>
+      <a-sphere position="8 6 -20" radius="1.25" color="#F7EC13"></a-sphere>
+        
+<!--      <a-sky color="#000"></a-sky>-->
+      <a-sky src="#skyTexture"></a-sky>
+    
+<!--
+      <a-torus-knot position="-3 3 -13" rotation="0 45 0" color="#4CC3D9"></a-torus-knot>
+      <a-dodecahedron position="2 3 -15" rotation="0 45 0" color="#4CC3D9"></a-dodecahedron>
+      <a-box src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ftexture.jpg?1490308149272" position="-2 0.5 -4"></a-box>
+      <a-ring position = "-1 2 -20" radius = "1.25" color="#CC37C5"></a-ring>
+      <a-ring position = "1 2 -20" radius = "1.25" color="#CC37C5"></a-ring>
+      <a-cylinder position="-1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+-->
+      
+    </a-scene>
+    </a-entity>
+  </body>
+</html>
