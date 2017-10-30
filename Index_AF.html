@@ -13,9 +13,53 @@
       src="img/bkgd.jpg">   
      </a-assets>
 <!--     <a-text value="Hello, YI" color="#fff" position="0 2 -2" align="center" rotation="" scale="" visible="" text=""></a-text>-->
+<!--      =============================-->
+  
+ <!-- ... -->
+  <a-sound src="img/Gabe_Boyer_-_03_-_Got_to_Get_With_You.mp3" autoplay="true"
+    position="-3 1 -4"></a-sound>
+  <!-- ... -->
+        <script>
+        // Get hold of the scene element
+var scene = document.querySelector('a-scene');
+
+// Random sphere creator
+function createSphere() {
+  var sphere = document.createElement('a-sphere');
+  sphere.setAttribute('position', `${(Math.random() * 20) - 5} ${(Math.random() * 10) - 5} ${(Math.random() * 10) - 5}`);
+  sphere.setAttribute('radius', Math.random())
+  sphere.setAttribute("color", "#F7EC13");
+  return sphere;
+}
+
+// Generate 50 random spheres
+for(let i = 0; i < 50; i++) {
+  scene.appendChild(createSphere());
+}
+
+// Helper function
+// Generate random hex
+function generateHex() {
+//  var l = '0123456789ABCDEF';
+//  var c = '#';
+  for (var i = 0; i < 6; i++) {
+    c += l[Math.floor(Math.random() * 16)];
+  }
+  return c;
+}
+        </script>
+        
+<!--      =============================-->
       
-      <a-sphere position="1 -17 -200" radius="1.25" color="#F7EC13"><a-animation attribute="position" to="0 2.2 -1" direction="alternate" dur="2000"
+      <a-sphere src= "img/licky_double.png" position="1 -17 -200" radius="1.25" color="#F7EC13"><a-animation attribute="position" to="0 2.2 -1" direction="alternate" dur="3000"
       repeat="indefinite"></a-animation></a-sphere>
+        
+      <a-light type="ambient" intensity="0.9" color="#ffffff"></a-light>
+      <a-light intensity="2" color="#00ffff" position="-5.72 6.65 0.80" animation__color="property:color; dir:alternate; dur:2000; easing:easeInOutSine; loop:true; to:#ff0000" alongpath="path:10,10,-10 -20,10,-10 10,0,-10; closed:true; dur:12000"></a-light>
+      <a-light intensity="4" color="#ff0000" position="8.60 6.65 0.80" animation__color="property:color; dir:alternate; dur:2000; easing:easeInOutSine; loop:true; to:#0000ff" alongpath="path:-2,-2,5 2,-1,5 0,-1,5; closed:true; dur:3000;"></a-light>
+      
+<!--
+      <a-box position="-5 9 -20" radius="1.25" color="#351298"></a-box>
       <a-sphere position="-5 9 -20" radius="1.25" color="#F7EC13"></a-sphere>
       <a-sphere position="0 5 -15" radius="1.25" color="#F7EC13"></a-sphere>
       <a-sphere position="2 7 -15" radius="1.25" color="#F7EC13"></a-sphere>
@@ -31,9 +75,10 @@
       <a-sphere position="15 2 -10" radius="1.25" color="#F7EC13"></a-sphere>
       <a-sphere position="9 3 -30" radius="1.25" color="#F7EC13"></a-sphere>
       <a-sphere position="8 6 -20" radius="1.25" color="#F7EC13"></a-sphere>
+-->
         
-<!--      <a-sky color="#000"></a-sky>-->
-      <a-sky src="#skyTexture"></a-sky>
+      <a-sky color="#000"></a-sky>
+<!--      <a-sky src="#skyTexture"></a-sky>-->
     
 <!--
       <a-torus-knot position="-3 3 -13" rotation="0 45 0" color="#4CC3D9"></a-torus-knot>
